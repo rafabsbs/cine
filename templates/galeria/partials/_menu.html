@@ -2,9 +2,14 @@
 <div class="pagina-inicial">
     <header class="cabecalho">
         <img src="{% static '/assets/logo/ingresso.png' %}" alt="Logo da Alura Space" />
+        {% for message in messages %}
+        <div class="card__message">
+            <p id="messages">{{message}}</p>
+        </div>
+        {% endfor %}
         <main class="principal">
-            <section class="menu-lateral">
-                <nav class="menu-lateral__navegacao">
+            <section class="cabecalho">
+                <nav class="cabecalho">
                     <a href="{% url 'inicial' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}">Home</a>
                     <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}">Login</a>
                     <a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}">Cadastro</a>

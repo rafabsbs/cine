@@ -54,85 +54,81 @@ table {
     border-spacing: 0;
 }
 
-.banner {
-    width: auto;
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.banner__imagem {
-    border-radius: 20px;
-    width: 100%; 
-    background: linear-gradient(45deg, #ffffff,black,#ffffff);
-    padding: 5px; 
-
-}
-
-.banner__titulo {
-    color: #FFFFFF;
-    font-size: 70px;
-    width: 400px;
-    line-height: 70px;
-    position: absolute;
-    top: 20px;
-    left: 80px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
-}
-
-.cabecalho {
-    align-items: center;    
+.cabecalho { 
+    box-shadow: 0px 10px 10px #ff0000;        
     display: flex;
-    justify-content: space-between;
-    margin: 1.5rem 0 3rem 0;
-    box-shadow: 0px 10px 10px #ff0000;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cabecalho a {
+    font-family: 'Space Grotesk', sans-serif;
+    align-items:center;
+    display: flex;
+    text-decoration: none;
+    color: #D9D9D9;
+    font-size: 20px;
+    margin-right: 1rem;
+    padding: .5rem .5rem;
+    text-align: center;
+    top: 10px;
+}
+
+.cabecalho img {
+    margin-right: 1.5rem;
+}
+
+.cabecalho a:first-child {
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .cabecalho__nome {
-    color: #ffffff;
+    color: #ff0000;
     font-size: 40px;
     font-family: italic;
     
 }
 
 .cabecalho__busca {
-    align-items: center;
     border-radius: 10px;
     background: linear-gradient(45deg, #4a0000,#ffffff);
-    display: flex;
-    height: auto;
-    justify-content: space-between;
     padding: 2px;
-    width: auto; 
+    
 }
 
 .busca__fundo {
-    align-items: center;
     background-color: #000000;
     border-radius: 8px;
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
 }
 
 .busca__input {
-    align-items: center;
     background-color: transparent;
     border: none;
-    font-size: 1rem;
-    height: 24px;
+    font-size: 1rem;    
     padding: 10px;
     width: 300px;
     color: #ffffff;
 }
 
+
 .busca__icone {
     cursor: pointer;
     width: 2rem;
     height: 2rem;
+    border-radius: 20px;
+    color: #000000;
+    background-color: #000000;
 }
 
-
+.card__message{
+    color: #FFFFFF;
+    background-color: #ff0000;
+    border: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-style: italic;
+}
 
 .cards__titulo {
     color: #ffffff;
@@ -221,49 +217,46 @@ table {
 }
 
 .imagem__imagem {
-    width: 100%;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    align-items:center ;
+    width: 800px;
+    height: 600px;
     border-radius: 20px;
 }
 
 .imagem__info {
-    align-items: top;
+    align-items: center;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
     margin-left: 1rem;
 }
 
-.imagem__texto {
-    flex-direction: column;
-    justify-content: space-between;
-    color: #FFFFFF;
-    margin-top: 1rem;
-}
-
-.imagem__titulo {
+.imagem__nome {
+    padding-top: 20px;
     padding-left: 20px;
     margin-left: 20px;
-    margin-top: 1rem;
     color: #FFFFFF;
     font-size: 2rem;
     font-style: italic;
 }
 
-.imagem__texto {
+.imagem__descricao {
     padding-left: 20px;
     margin-left: 20px;
-    margin-top: 8rem;
+    margin-top: 5rem;
     flex-direction: column;
     font-size: 1.5rem;
     color: #FFFFFF;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.imagem__descricao {
-    padding-left: 20px;
-    margin-left: 20px;
+.imagem__legenda{
+    padding-left: 25px;
+    margin-left: 25px;
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #FFFFFF;
@@ -279,40 +272,6 @@ table {
     margin-top: 3rem;
     padding-left: 20px;
     margin-left: 20px;
-}
-
-.menu-lateral {
-    padding-right: 1.5rem;
-    box-sizing: border-box;
-    min-width: 270px;
-}
-
-.menu-lateral__navegacao {
-    display: flex;
-    flex-direction: row;
-}
-
-.menu-lateral__navegacao a {
-    font-family: 'Space Grotesk', sans-serif;
-    align-items:center;
-    display: flex;
-    text-decoration: none;
-    color: #D9D9D9;
-    font-size: 20px;
-    margin-right: 1rem;
-    padding: .5rem .5rem;
-    text-align: center;
-    top: 10px;
-   
-}
-
-.menu-lateral__navegacao a:first-child {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.menu-lateral__navegacao img {
-    margin-right: 1.5rem;
 }
 
 .pagina-inicial {
@@ -402,6 +361,7 @@ table {
 }
 
 .tags__titulo {
+    margin-top: 5rem;
     margin-right: 4rem;
 }
 
@@ -410,7 +370,9 @@ table {
 }
 
 .tags__tag {
-    background-color: #D9D9D930;
+    top: 50px;
+    background-color: #ff0000;
+    margin-top: 5rem;
     margin-right: 1.5rem;
     border-radius: 8px;
     padding: .8rem .5rem;
