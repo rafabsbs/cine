@@ -1,9 +1,9 @@
 from django.urls import path
 from apps.galeria.views import\
-      inicial, imagem, buscar, nova_imagem, editar_imagem, deletar_imagem, filtro
+      index, imagem, buscar, nova_imagem, editar_imagem, deletar_imagem, filtro
 
 urlpatterns = [
-    path('', inicial, name='inicial'),
+    path('', index, name='index'),
     path('imagem/<int:foto_id>', imagem, name='imagem'),
     path('buscar', buscar,name="buscar"),
     path('nova-imagem', nova_imagem, name='nova_imagem'),

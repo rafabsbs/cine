@@ -1,5 +1,5 @@
 {% load static %}
-<div class="pagina-inicial">
+<div class="pagina-index">
     <div style="width: 500px;margin-left: 500px;">
         {% include 'partials/_alerta.html' %}
     </div>
@@ -9,7 +9,7 @@
         <main class="principal">
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
-                    <a href="{% url 'inicial' %}"><img src="{% static 'assets/ícones/1x/home.png' %}"> Home</a>
+                    <a href="{% url 'index' %}"><img src="{% static 'assets/ícones/1x/home.png' %}"> Home</a>
                     <a href="{% url 'login' %}"><img src="{% static 'assets/ícones/1x/user.png' %}"> Login</a>
                     <a href="{% url 'cadastro' %}"><img src="{% static 'assets/ícones/1x/pen.png' %}"> Cadastro</a>
                     <a href="{% url 'logout' %}"><img src="{% static 'assets/ícones/1x/logout.png' %}"> Logout</a>
