@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import datetime
-
+from django.contrib.auth.models import User
 
 class Fotografia(models.Model):
 
@@ -16,8 +16,15 @@ class Fotografia(models.Model):
     descricao = models.TextField(null=False, blank=False)
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)
     video = models.URLField()
-    publicada = models.BooleanField(default=False)
+    publicada = models.BooleanField(default=True)
     data_fotografia = models.DateTimeField(default=datetime.now, blank=False)
+    usuario = models.ForeignKey(
+        to=User,
+        on_delete= models.SET_NULL,
+        null=True,
+        blank=False,
+        related_name="user",
+    )
 
     def __str__(self):
         return self.video

@@ -232,14 +232,14 @@ table {
     background-color: #000000a9;
 }
 
-.imagem__titulo {
+.imagem__nome {
     font-weight: bold;
-    line-height: 2rem;
+    line-height: 4rem;
     color: #FFFFFF;
 }
 
-.imagem__texto {
-    font-size: 4rem;
+.imagem__legenda {
+    font-size: 3rem;
     background-color: #00000097;
     
 }
